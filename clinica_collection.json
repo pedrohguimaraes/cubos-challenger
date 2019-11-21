@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "8cd691de-d331-401c-bb59-125aff6113c8",
+		"name": "Regras Clínica",
+		"description": "Desafio da cubos para o processo seletivo back-end.\nA API consiste no gerenciamento de horários de uma clínica e contém endpoints que satisfazem as seguintes tarefas:\n\n- Cadastrar regras de horários para atendimento\n- Apagar regra de horário para atendimento\n- Listar regras de horários para atendimento\n- Listar horários disponíveis dentro de um intervalo\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Store Rule",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0052d35c-0deb-4789-a344-1749bb13093d",
+						"exec": [
+							"tests[\"Regra cadastrada com sucesso\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"day\": [\"05-05-2019\"], \r\n    \"intervals\": {\"start\": \"14:00\", \"end\": \"16:00\"}\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/daily/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"daily",
+						"store"
+					]
+				},
+				"description": "Este endpoint cadastra uma regra, seguindo algumas das alternativas seguintes:\n\n- Um dia especifico, por exemplo: estará disponível para atender dia 25/06/2018 nos intervalos de 9:30 até 10:20 e de 10:30 até as 11:00\n- Diáriamente, por exemplo: estará disponível para atender todos os dias das 9:30 até as 10:10\n- Semanalmente, por exemplo: estará disponível para atender todas segundas e quartas das 14:00 até as 14:30"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Rule",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "40a046a2-d207-49b6-9b67-24aa045e9b91",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e52d4bde-33f5-4a90-a677-5b535bc081a6",
+						"exec": [
+							"tests[\"Regras retornadas com sucesso\"] = responseCode.code === 200;",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/daily/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"daily",
+						""
+					]
+				},
+				"description": "Retorna todas as regras cadastradas."
+			},
+			"response": []
+		},
+		{
+			"name": "Check Rule",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7612800a-89b3-4ae2-a29e-79c9efb7cb09",
+						"exec": [
+							"tests[\"Regras retornadas com sucesso\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"begin\": \"10-01-2019\",\n\t\"end\": \"30-04-2019\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/daily/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"daily",
+						"check"
+					]
+				},
+				"description": "Este endpoint deve retornar os horários disponíveis, considerando um intervalo de datas informadas na requisição."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Rule",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "440b8a6d-7042-4fd9-935f-35a187503a72",
+						"exec": [
+							"tests[\"Regra deletada com sucesso\"] = responseCode.code === 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/daily/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"daily",
+						"0"
+					]
+				},
+				"description": "Este metódo é capaz de apagar uma regra especifica criada pelo endpoint /store de acordo com a chave do array no content.json"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

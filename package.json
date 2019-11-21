@@ -1,0 +1,17 @@
+{
+  "name": "21auth",
+  "version": "1.0.0",
+  "description": "Autenticador",
+  "main": "index.js",
+  "author": "Pedro Guimarães",
+  "license": "MIT",
+  "keywords": [],
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "fs": "^0.0.1-security",
+    "moment": "^2.24.0",
+    "nodemon": "^1.18.10",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,258 @@
+{
+	"id": "08b0fe51-f36b-4242-a984-cc79db20f709",
+	"name": "Regras Clínica",
+	"allTests": [],
+	"timestamp": "2019-07-05T13:29:01.564Z",
+	"collection_id": "6daa9734-9efa-4d32-9b21-77f20bfa69a0",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "6daa9734-9efa-4d32-9b21-77f20bfa69a0",
+		"name": "Regras Clínica",
+		"description": "Desafio da cubos para o processo seletivo back-end.\nA API consiste no gerenciamento de horários de uma clínica e contém endpoints que satisfazem as seguintes tarefas:\n\n- Cadastrar regras de horários para atendimento\n- Apagar regra de horário para atendimento\n- Listar regras de horários para atendimento\n- Listar horários disponíveis dentro de um intervalo\n",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [
+			"3808f323-9dce-42c5-a2d5-7bb144de282e",
+			"54779c4b-623a-47fe-bcb1-dd3252197aa1",
+			"cf4aaf62-e74a-45ac-bded-17d4f5730a0c",
+			"5bb3ed26-70f0-4c07-bea0-1b3bcbc7c71d"
+		],
+		"folders_order": [],
+		"owner": "3610637",
+		"favorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "Store Rule",
+			"id": "54779c4b-623a-47fe-bcb1-dd3252197aa1",
+			"url": "http://localhost:3000/daily/store",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Regra cadastrada com sucesso": true
+			},
+			"testPassFailCounts": {
+				"Regra cadastrada com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"50"
+			],
+			"allTests": [
+				{
+					"Regra cadastrada com sucesso": true
+				}
+			],
+			"time": "50",
+			"totalRequestTime": "50",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get Rule",
+			"id": "3808f323-9dce-42c5-a2d5-7bb144de282e",
+			"url": "http://localhost:3000/daily/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Regras retornadas com sucesso": true
+			},
+			"testPassFailCounts": {
+				"Regras retornadas com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Regras retornadas com sucesso": true
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "Check Rule",
+			"id": "cf4aaf62-e74a-45ac-bded-17d4f5730a0c",
+			"url": "http://localhost:3000/daily/check",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Regras retornadas com sucesso": true
+			},
+			"testPassFailCounts": {
+				"Regras retornadas com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"6"
+			],
+			"allTests": [
+				{
+					"Regras retornadas com sucesso": true
+				}
+			],
+			"time": "6",
+			"totalRequestTime": "6",
+			"iterationResults": {}
+		},
+		{
+			"name": "Delete Rule",
+			"id": "5bb3ed26-70f0-4c07-bea0-1b3bcbc7c71d",
+			"url": "http://localhost:3000/daily/0",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Regra deletada com sucesso": true
+			},
+			"testPassFailCounts": {
+				"Regra deletada com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"518"
+			],
+			"allTests": [
+				{
+					"Regra deletada com sucesso": true
+				}
+			],
+			"time": "518",
+			"totalRequestTime": "518",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 4,
+	"totalFail": 0,
+	"totalTime": 579,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Store Rule",
+			"id": "54779c4b-623a-47fe-bcb1-dd3252197aa1",
+			"url": "http://localhost:3000/daily/store",
+			"time": "2019-07-05T13:29:01.564Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Regra cadastrada com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get Rule",
+			"id": "3808f323-9dce-42c5-a2d5-7bb144de282e",
+			"url": "http://localhost:3000/daily/",
+			"time": "2019-07-05T13:29:01.564Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Regras retornadas com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Check Rule",
+			"id": "cf4aaf62-e74a-45ac-bded-17d4f5730a0c",
+			"url": "http://localhost:3000/daily/check",
+			"time": "2019-07-05T13:29:01.564Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Regras retornadas com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Delete Rule",
+			"id": "5bb3ed26-70f0-4c07-bea0-1b3bcbc7c71d",
+			"url": "http://localhost:3000/daily/0",
+			"time": "2019-07-05T13:29:01.564Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Regra deletada com sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
